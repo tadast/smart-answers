@@ -37,6 +37,8 @@ module SmartdownAdapter
       case smartdown_question
       when Smartdown::Api::MultipleChoice
         "multiple_choice_question"
+      when Smartdown::Api::MultipleChoiceMultipleAnswer
+        "checkbox_question"
       when Smartdown::Api::DateQuestion
         "date_question"
       when Smartdown::Api::CountryQuestion

@@ -1,0 +1,11 @@
+# Are you studying one of these courses?
+
+[choice: course_studied]
+* teacher-training: Teacher training
+* dental-medical-healthcare: Dental, medical or healthcare
+* social-work: Social work
+* none-of-the-above: None of these
+
+* course_type is 'uk-full-time' => outcome_uk_full_time_students
+* course_type is 'uk-part-time' => outcome_uk_all_students
+* otherwise => outcome_eu_students

@@ -1,0 +1,7 @@
+# When does your course start?
+
+[choice: start_date]
+* 2014-2015: Between September 2014 and August 2015
+* 2015-2016: Between September 2015 and August 2016
+
+* otherwise => what_type_of_student_are_you

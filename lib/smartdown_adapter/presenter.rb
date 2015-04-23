@@ -22,8 +22,10 @@ module SmartdownAdapter
       @smartdown_flow = smartdown_flow
       @started = request[:started]
       previous_smartdown_inputs = process_inputs(responses_from_url(request))
+Rails.logger.info "previous_smartdown_inputs: #{previous_smartdown_inputs.inspect}"
       @previous_smartdown_state = @smartdown_flow.state(started, previous_smartdown_inputs)
       @responses_url_and_request = process_inputs(responses_from_request(request))
+Rails.logger.info "@responses_url_and_request: #{@responses_url_and_request.inspect}"
       @smartdown_state = @smartdown_flow.state(started, @responses_url_and_request)
     end
 
@@ -150,12 +152,15 @@ module SmartdownAdapter
         if response == ''
           nil
         else
-          if response.is_a? Hash
+          case response
+          when Hash
             if response.has_key?(:day)
               "#{response[:year]}-#{response[:month]}-#{response[:day]}"
             elsif response.has_key?(:amount)
               "#{response[:amount]}-#{response[:period]}"
             end
+          when Array
+            response.join(',')
           else
             response
           end

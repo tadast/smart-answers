@@ -1,0 +1,43 @@
+{snippet: uk_students_body_text_start}
+
+{snippet: eligible_finance}
+
+###Extra student funding
+
+$IF no_additional_benefits?(additional_qualifying_circumstances course_studied)
+
+You don’t qualify for extra grants and allowances.
+
+$ELSE
+
+You could get:
+
+$IF has_disability?(additional_qualifying_circumstances)
+
+- [Disabled Students' Allowances](/disabled-students-allowances-dsas)
+
+$ENDIF
+
+$IF low_income?(additional_qualifying_circumstances)
+
+- [University and college hardship funds](/extra-money-pay-university/university-and-college-hardship-funds) (extra help with costs while studying)
+
+$ENDIF
+
+$IF studying_teacher_training?(course_studied)
+
+- [Funding for teacher training](/teacher-training-funding)
+
+$ELSEIF studying_dental_medical_healthcare?(course_studied)
+
+- [NHS Bursary](/nhs-bursaries) (NHS funding towards your fees and living costs)
+
+$ELSEIF studying_social_work?(course_studied)
+
+- [Social Work Bursary](/social-work-bursaries) (NHS funding towards your fees and living costs)
+
+$ENDIF
+
+$ENDIF
+
+{snippet: uk_students_body_text_end}

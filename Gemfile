@@ -20,11 +20,11 @@ gem 'sass-rails', '~> 4.0.0'
 gem 'therubyracer', '~> 0.12.1'
 gem 'uglifier'
 
-if ENV['SMARTDOWN_DEV']
+# if ENV['SMARTDOWN_DEV']
   gem 'smartdown', :path => '../smartdown'
-else
-  gem 'smartdown', '0.14.0'
-end
+# else
+#   gem 'smartdown', '0.14.0'
+# end
 
 if ENV['API_DEV']
   gem 'gds-api-adapters', :path => '../gds-api-adapters'

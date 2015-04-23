@@ -1,0 +1,8 @@
+# Do any of the following apply (you might get extra funding)?
+
+[choice: additional_qualifying_circumstances]
+* has-disability: You’ve a disability, health condition or learning difficulty -  eg dyslexia
+* low-income: You’re on low income - eg you find it hard to pay for basics like food and accommodation
+* no: None of these
+
+* otherwise => what_course_are_you_studying

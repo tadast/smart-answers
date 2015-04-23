@@ -1,0 +1,9 @@
+# How much are your tuition fees per year?
+
+The maximum is £9,000 for full-time students and £6,750 for part-time students.
+
+[money: tuition_fee_amount]
+
+* course_type is 'uk-full-time' => where_will_you_live_while_studying
+* course_type is 'uk-part-time' => do_any_of_the_following_apply_all_uk_students
+* course_type in {eu-full-time eu-part-time} => outcome_eu_students

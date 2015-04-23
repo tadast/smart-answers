@@ -1,0 +1,7 @@
+# What's your annual household income?
+
+This is your parents’ or partner’s gross (pre-tax) income plus your own. It affects how much Maintenance Loan and Maintenance Grant (help with living costs) you get.
+
+[money: household_income]
+
+* otherwise => do_any_of_the_following_apply_uk_full_time_students_only

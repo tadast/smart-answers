@@ -1,0 +1,3 @@
+- %{tuition_fee_amount} Tuition Fee Loan
+- %{maintenance_loan_amount(start_date study_location household_income)} Maintenance Loan (for living costs)
+- %{maintenance_grant_amount(household_income)} Maintenance Grant (for living costs)

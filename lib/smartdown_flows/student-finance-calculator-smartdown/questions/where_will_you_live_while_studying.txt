@@ -1,0 +1,8 @@
+# Where will you live while studying?
+
+[choice: study_location]
+* at-home: Living with parents
+* away-outside-london: Not living with parents and studying outside of London
+* away-in-london: Not living with parents and studying in London
+
+* otherwise => whats_your_household_income

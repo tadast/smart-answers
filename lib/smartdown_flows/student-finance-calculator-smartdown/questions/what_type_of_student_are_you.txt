@@ -1,0 +1,9 @@
+# What type of student are you?
+
+[choice: course_type]
+* uk-full-time: UK student full-time
+* uk-part-time: UK student part-time
+* eu-full-time: EU student full-time
+* eu-part-time: EU student part-time
+
+* otherwise => how_much_are_your_tuition_fees_per_year
