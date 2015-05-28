@@ -36,10 +36,6 @@ SMART_ANSWER_FLOW_NAMES = %w(
   vat-payment-deadlines
 )
 
-SMART_ANSWER_FLOW_NAMES.each do |name|
-  require "smart_answer_flows/#{name}"
-end
-
 module SmartAnswer
   class FlowRegistry
     class NotFound < StandardError; end
@@ -72,7 +68,7 @@ module SmartAnswer
 
     def available_flows
       Dir[@load_path.join('*.rb')].map do |path|
-        File.basename(path, ".rb")
+        File.basename(path, ".rb").sub(/_flow$/, "").gsub("_", "-")
       end
     end
 
