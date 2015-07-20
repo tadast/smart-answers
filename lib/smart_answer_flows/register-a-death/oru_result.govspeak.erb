@@ -61,9 +61,9 @@ Copy of a death registration certificate | £65
 You must also pay for your documents to be returned to you.
 
 Postage destination | Fee
-UK | £4.50
-Europe | £12.50
-Rest of world | £22
+UK | <%= document_return_fees.post_to_uk %>
+Europe | <%= document_return_fees.post_to_europe %>
+Rest of world | <%= document_return_fees.post_to_rest_of_the_world %>
 
 <%= render partial: '../data_partials/button.erb', locals: { button_data: button_data } %>
 
