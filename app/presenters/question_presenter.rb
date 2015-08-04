@@ -10,4 +10,8 @@ class QuestionPresenter < NodePresenter
   def multiple_responses?
     false
   end
+
+  def questions
+    [self]
+  end
 end

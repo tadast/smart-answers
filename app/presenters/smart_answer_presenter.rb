@@ -119,7 +119,7 @@ class SmartAnswerPresenter
   end
 
   def questions
-    (current_node.is_a? QuestionPresenter) ? [current_node] : []
+    current_node.questions
   end
 
   def current_node

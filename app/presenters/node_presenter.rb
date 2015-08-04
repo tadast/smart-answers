@@ -122,6 +122,10 @@ class NodePresenter
     !!next_steps
   end
 
+  def questions
+    []
+  end
+
   def options
     @node.options.map do |option|
       OpenStruct.new(label: translate_option(option), value: option)
