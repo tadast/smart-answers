@@ -58,6 +58,10 @@ module SmartAnswer
       nil
     end
 
+    def multiple_questions(name, options = {}, &block)
+      add_node Question::MultipleQuestions.new(name, self, options, &block)
+    end
+
     def multiple_choice(name, options = {}, &block)
       add_node Question::MultipleChoice.new(name, options, &block)
     end

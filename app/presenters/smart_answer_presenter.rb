@@ -91,6 +91,8 @@ class SmartAnswerPresenter
 
   def presenter_for(node)
     presenter_class = case node
+                      when SmartAnswer::Question::MultipleQuestions
+                        MultipleQuestionPresenter
                       when SmartAnswer::Question::Date
                         DateQuestionPresenter
                       when SmartAnswer::Question::CountrySelect
@@ -151,11 +153,22 @@ class SmartAnswerPresenter
   end
 
   def all_responses
-    normalize_responses_param.dup.tap do |responses|
-      if params[:next]
+    responses = normalize_responses_param.dup.tap do |responses|
+      if params[:next] && params[:response]
         responses << params[:response]
       end
     end
+
+    if request[:next] && params[:response].blank?
+      multiple_question_responses =
+        params.keys.select do |key|
+          key =~ /response_\d/
+        end.map do |key|
+          params[key]
+        end
+      responses += multiple_question_responses
+    end
+    responses
   end
 
   def page_title
