@@ -123,11 +123,15 @@ module SmartAnswer
     end
 
     def process(responses)
+      # this code assumes there is one response per question
+      # and does question processing and transitioning  to the
+      # next node at the same time and they are intertangled :(
       responses.inject(start_state) do |state, response|
         return state if state.error
         begin
-          state = node(state.current_node).transition(state, response)
-          node(state.current_node).evaluate_precalculations(state)
+          current_node = node(state.current_node)
+          state = current_node.transition(state, response)
+          current_node.evaluate_precalculations(state)
         rescue ArgumentError, InvalidResponse => e
           state.dup.tap do |new_state|
             new_state.error = e.message
