@@ -27,10 +27,6 @@ module SmartdownAdapter
       @smartdown_state = @smartdown_flow.state(started, @responses_url_and_request)
     end
 
-    def accepted_responses
-      @smartdown_state.accepted_responses
-    end
-
     def questions
       current_node.questions
     end
