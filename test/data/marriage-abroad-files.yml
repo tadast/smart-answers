@@ -100,6 +100,6 @@ lib/smart_answer_flows/marriage-abroad/outcome_ss_marriage_malta.govspeak.erb: a
 lib/smart_answer_flows/marriage-abroad/outcome_ss_marriage_not_possible.govspeak.erb: 800f400fb97200d114f5e8b80531a4d5
 lib/smart_answer_flows/marriage-abroad/outcome_switzerland.govspeak.erb: 97c1cfdd18b7611c25698df8d93091df
 lib/smart_answer_flows/data_partials/_overseas_passports_embassies.erb: 2f521bae99c2f48b49d07bcb283a8063
-lib/smart_answer/calculators/marriage_abroad_data_query.rb: 125ce6e83d25d02bde1ac9f2db6eeb14
+lib/smart_answer/calculators/marriage_abroad_data_query.rb: 5bd31460404f6b5533b252907e6246da
 lib/smart_answer/calculators/country_name_formatter.rb: 0cb274748f0daf3965451b6230c183fd
 lib/smart_answer/calculators/registrations_data_query.rb: cbb0fad828d74606eb708d3442cf4ca5
