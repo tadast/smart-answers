@@ -418,7 +418,10 @@
 
   <% end %>
   <% if resident_of == 'ceremony_country' %>
-    <% if %w(germany).exclude?(ceremony_country) %>
+    <% if ceremony_country == 'greece' %>
+      <%= render partial: 'download_and_fill_notice_and_affidavit_in_greece.govspeak.erb' %>
+
+    <% elsif %w(germany).exclude?(ceremony_country) %>
       <%= render partial: 'download_and_fill_notice_and_affidavit_but_not_sign.govspeak.erb' %>
 
     <% end %>
